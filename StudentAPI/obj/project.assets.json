@@ -285,11 +285,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Diplomado\\Modulo II\\Final\\UnitTestingPracticeUE\\StudentAPI\\StudentAPI.csproj",
+      "projectUniqueName": "D:\\Diplomado\\Modulo II\\Final\\PracticaUnitTestingUE\\StudentAPI\\StudentAPI.csproj",
       "projectName": "StudentAPI",
-      "projectPath": "D:\\Diplomado\\Modulo II\\Final\\UnitTestingPracticeUE\\StudentAPI\\StudentAPI.csproj",
+      "projectPath": "D:\\Diplomado\\Modulo II\\Final\\PracticaUnitTestingUE\\StudentAPI\\StudentAPI.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "D:\\Diplomado\\Modulo II\\Final\\UnitTestingPracticeUE\\StudentAPI\\obj\\",
+      "outputPath": "D:\\Diplomado\\Modulo II\\Final\\PracticaUnitTestingUE\\StudentAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

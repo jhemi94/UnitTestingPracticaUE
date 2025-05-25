@@ -1162,11 +1162,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Diplomado\\Modulo II\\Final\\UnitTestingPracticeUE\\StudentAPI.Tests\\StudentAPI.Tests.csproj",
+      "projectUniqueName": "D:\\Diplomado\\Modulo II\\Final\\PracticaUnitTestingUE\\StudentAPI.Tests\\StudentAPI.Tests.csproj",
       "projectName": "StudentAPI.Tests",
-      "projectPath": "D:\\Diplomado\\Modulo II\\Final\\UnitTestingPracticeUE\\StudentAPI.Tests\\StudentAPI.Tests.csproj",
+      "projectPath": "D:\\Diplomado\\Modulo II\\Final\\PracticaUnitTestingUE\\StudentAPI.Tests\\StudentAPI.Tests.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "D:\\Diplomado\\Modulo II\\Final\\UnitTestingPracticeUE\\StudentAPI.Tests\\obj\\",
+      "outputPath": "D:\\Diplomado\\Modulo II\\Final\\PracticaUnitTestingUE\\StudentAPI.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1188,8 +1188,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\Diplomado\\Modulo II\\Final\\UnitTestingPracticeUE\\StudentAPI\\StudentAPI.csproj": {
-              "projectPath": "D:\\Diplomado\\Modulo II\\Final\\UnitTestingPracticeUE\\StudentAPI\\StudentAPI.csproj"
+            "D:\\Diplomado\\Modulo II\\Final\\PracticaUnitTestingUE\\StudentAPI\\StudentAPI.csproj": {
+              "projectPath": "D:\\Diplomado\\Modulo II\\Final\\PracticaUnitTestingUE\\StudentAPI\\StudentAPI.csproj"
             }
           }
         }
