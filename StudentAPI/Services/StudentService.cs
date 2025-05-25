@@ -4,42 +4,42 @@ namespace StudentAPI.Services
 {
     public class StudentService : IStudentService
     {
-        private List<Student> _students;
+        private List<Estudiante> _estudiantes;
 
         public StudentService()
         {
-            _students = new List<Student>();
+            _estudiantes = new List<Estudiante>();
         }
 
-        public List<Student> GetAll()
+        public List<Estudiante> GetAll()
         {
-            return _students;
+            return _estudiantes;
         }
 
-        public Student GetByCi(int ci)
+        public Estudiante GetByCi(int ci)
         {
-            var student = _students.Find(s => s.CI == ci);
-            if (student == null)
+            var estudiante = _estudiantes.Find(s => s.CI == ci);
+            if (estudiante == null)
             {
-                student = new Student
+                estudiante = new Estudiante
                 {
                     CI = -1,
                     Nombre = "Not Found",
                     Nota = 0,
                 };
             }
-            return student;
+            return estudiante;
         }
 
-        public Student Create(Student student)
+        public Estudiante Create(Estudiante estudiante)
         {
-            Student createdStudent;
-            if (student.Nota < 0 || student.Nota > 100)
+            Estudiante createdStudent;
+            if (estudiante.Nota < 0 || estudiante.Nota > 100)
             {
-                createdStudent = new Student
+                createdStudent = new Estudiante
                 {
                     CI = -1,
-                    Nombre = student.Nombre + " / Nota Not Available",
+                    Nombre = estudiante.Nombre + " / Nota Not Available",
                     Nota = 0,
                 };
                 // devolver un mensaje de error
@@ -47,42 +47,42 @@ namespace StudentAPI.Services
             }
             else
             {
-                student.CI = _students.Count > 0 ? _students.Max(s => s.CI) + 1 : 1;
-                _students.Add(student);
-                createdStudent = student;
+                estudiante.CI = _estudiantes.Count > 0 ? _estudiantes.Max(s => s.CI) + 1 : 1;
+                _estudiantes.Add(estudiante);
+                createdStudent = estudiante;
             }
             return createdStudent;
         }
 
-        public Student Update(int ci, Student updatedStudent)
+        public Estudiante Update(int ci, Estudiante updatedStudent)
         {
-            var student = _students.FirstOrDefault(s => s.CI == ci);
+            var estudiante = _estudiantes.FirstOrDefault(s => s.CI == ci);
 
-            student.Nombre = updatedStudent.Nombre;
-            student.Nota = updatedStudent.Nota;
+            estudiante.Nombre = updatedStudent.Nombre;
+            estudiante.Nota = updatedStudent.Nota;
 
             // return NoContent();
-            return student;
+            return estudiante;
         }
 
-        public Student Delete(int ci)
+        public Estudiante Delete(int ci)
         {
-            var student = _students.FirstOrDefault(s => s.CI == ci);
-            if (student != null)
+            var estudiante = _estudiantes.FirstOrDefault(s => s.CI == ci);
+            if (estudiante != null)
             {
-                _students.Remove(student);
-                return student;
+                _estudiantes.Remove(estudiante);
+                return estudiante;
             }
             return null;
         }
 
         public Boolean HasApproved(int ci)
         {
-            var student = _students.FirstOrDefault(p => p.CI == ci);
-            if (student == null)
+            var estudiante = _estudiantes.FirstOrDefault(p => p.CI == ci);
+            if (estudiante == null)
                 return false;
 
-            return student.Nota >= 51;
+            return estudiante.Nota >= 51;
         }
     }
 }

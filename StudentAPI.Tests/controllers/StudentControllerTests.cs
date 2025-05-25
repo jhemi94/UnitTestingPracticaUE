@@ -43,7 +43,7 @@ namespace StudentAPI.Tests.Controllers
         {
             // Arrange
             var mock = new Mock<IStudentService>();
-            var estudianteEsperado = new Student
+            var estudianteEsperado = new Estudiante
             {
                 CI = 56334678,
                 Nombre = "Estefania Sarate",
@@ -66,7 +66,7 @@ namespace StudentAPI.Tests.Controllers
         {
             // Arrange
             var mock = new Mock<IStudentService>();
-            var estudianteEsperado = new Student
+            var estudianteEsperado = new Estudiante
             {
                 CI = 65432123,
                 Nombre = "Pedro Rojas",

@@ -7,17 +7,17 @@ namespace StudentAPI.Tests.Utils
 {
     public static class StudentUtils
     {
-        public static List<Student> GetTestStudents()
+        public static List<Estudiante> GetTestStudents()
         {
-            return new List<Student>
+            return new List<Estudiante>
             {
-                new Student
+                new Estudiante
                 {
                     CI = 56744323,
                     Nombre = "María López",
                     Nota = 45,
                 },
-                new Student
+                new Estudiante
                 {
                     CI = 10345214,
                     Nombre = "Fraya Jhemina Chambi",

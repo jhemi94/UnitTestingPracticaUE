@@ -5,19 +5,19 @@ namespace StudentAPI.Tests.Stubs
 {
     public class StudentServiceStub : IStudentService
     {
-        private List<Student> _students;
+        private List<Estudiante> _estudiantes;
 
         public StudentServiceStub()
         {
-            _students = new List<Student>()
+            _estudiantes = new List<Estudiante>()
             {
-                new Student
+                new Estudiante
                 {
                     CI = 56744323,
                     Nombre = "María López",
                     Nota = 45,
                 },
-                new Student
+                new Estudiante
                 {
                     CI = 10345214,
                     Nombre = "Fraya Jhemina Chambi",
@@ -26,34 +26,34 @@ namespace StudentAPI.Tests.Stubs
             };
         }
 
-        public List<Student> GetAll()
+        public List<Estudiante> GetAll()
         {
-            return _students;
+            return _estudiantes;
         }
 
-        public Student GetByCi(int ci)
+        public Estudiante GetByCi(int ci)
         {
-            return _students.FirstOrDefault(s => s.CI == ci);
+            return _estudiantes.FirstOrDefault(s => s.CI == ci);
         }
 
         public bool HasApproved(int ci)
         {
-            var student = _students.FirstOrDefault(p => p.CI == ci);
+            var student = _estudiantes.FirstOrDefault(p => p.CI == ci);
             if (student == null)
                 return false;
 
             return student.Nota >= 51;
         }
 
-        public Student Create(Student student)
+        public Estudiante Create(Estudiante student)
         {
-            _students.Add(student);
+            _estudiantes.Add(student);
             return student;
         }
 
-        public Student Update(int ci, Student updatedStudent)
+        public Estudiante Update(int ci, Estudiante updatedStudent)
         {
-            var existing = _students.FirstOrDefault(s => s.CI == ci);
+            var existing = _estudiantes.FirstOrDefault(s => s.CI == ci);
             if (existing != null)
             {
                 existing.Nombre = updatedStudent.Nombre;
@@ -62,12 +62,12 @@ namespace StudentAPI.Tests.Stubs
             return existing;
         }
 
-        public Student Delete(int ci)
+        public Estudiante Delete(int ci)
         {
-            var student = _students.FirstOrDefault(s => s.CI == ci);
+            var student = _estudiantes.FirstOrDefault(s => s.CI == ci);
             if (student != null)
             {
-                _students.Remove(student);
+                _estudiantes.Remove(student);
             }
             return student;
         }

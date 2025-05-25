@@ -1,11 +1,11 @@
 namespace StudentAPI.Models
 {
-    public class Student
+    public class Estudiante
     {
         public int CI { get; set; }
         public string Nombre { get; set; }
         public int Nota { get; set; }
-        public Student()
+        public Estudiante()
         {
             Nombre = string.Empty; // ← Solución más rápida
         }
